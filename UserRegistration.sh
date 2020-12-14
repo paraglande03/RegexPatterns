@@ -20,10 +20,29 @@ read -p "Enter Last name:" name
 pattern="^[[:upper:]]{1}[[:lower:]]{2,}$"
         if [[ $name =~ $pattern ]]
         then
-		flag=2
+		flag=0
         else
                 echo "Invalid Enter Again"
         fi
+done
+
+while [[ flag -eq 0 ]]
+do
+read -p "Enter Mobile number:" name
+
+pattern="^[0-9]{2}[ ][0-9]{10}$"
+        if [[ $name =~ $pattern ]]
+        then
+                flag=1
+        else
+                echo "Invalid Enter Again"
+        fi
+
+
+
+
+
+
 done
 
 
