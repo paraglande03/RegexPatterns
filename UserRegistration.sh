@@ -37,21 +37,20 @@ pattern="^[0-9]{2}[ ][0-9]{10}$"
         else
                 echo "Invalid Enter Again"
         fi
-
-
-
-
-
-
 done
 
+while [[ flag -eq 1 ]]
+do
+read -p "Enter Email ID number:" name
 
-
-
-
-
-
-
+	pattern="^[a-zA-Z0-9]+([._+-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+.[a-zA-Z]{2,4}([.][a-zA-Z]{2})*$"
+        if [[ $name =~ $pattern ]]
+        then
+                flag=0
+        else
+                echo "Invalid Enter Again"
+        fi
+done
 
 
 
