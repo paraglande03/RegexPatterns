@@ -53,6 +53,18 @@ read -p "Enter Email ID number:" name
 done
 
 
+while [[ flag -eq 0 ]]
+do
+read -p "Enter Password number:" name
+
+        pattern="^[a-zA-Z0-9]{8,}$"
+        if [[ $name =~ $pattern ]]
+        then
+                flag=1
+        else
+                echo "Invalid Enter Again"
+        fi
+done
 
 
 
