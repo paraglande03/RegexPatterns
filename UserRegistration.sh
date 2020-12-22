@@ -57,7 +57,7 @@ while [[ flag -eq 0 ]]
 do
 read -p "Enter Password number:" name
 
-        pattern="^[A-Z][a-zA-Z0-9]{7,}$"
+        pattern="^[A-Z][0-9][a-zA-Z0-9]{7,}$"
         if [[ $name =~ $pattern ]]
         then
                 flag=1
